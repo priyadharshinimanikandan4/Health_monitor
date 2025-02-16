@@ -1,0 +1,78 @@
+import React, { useState } from 'react';
+import axios from 'axios';
+
+const HealthForm = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    age: '',
+    heartRate: '',
+    bloodPressure: '',
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({
+      ...prevState,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await axios.post('http://localhost:5000/health', formData);
+      console.log('Data submitted:', response.data);
+      alert('Health data submitted successfully!');
+    } catch (error) {
+      console.error('Error submitting data:', error);
+      alert('Error submitting data!');
+    }
+  };
+
+  return (
+    <div>
+      <h2>Health Monitoring Form</h2>
+      <form onSubmit={handleSubmit}>
+        <label>Name:</label>
+        <input
+          type="text"
+          name="name"
+          value={formData.name}
+          onChange={handleChange}
+          required
+        />
+        <br />
+        <label>Age:</label>
+        <input
+          type="number"
+          name="age"
+          value={formData.age}
+          onChange={handleChange}
+          required
+        />
+        <br />
+        <label>Heart Rate (bpm):</label>
+        <input
+          type="number"
+          name="heartRate"
+          value={formData.heartRate}
+          onChange={handleChange}
+          required
+        />
+        <br />
+        <label>Blood Pressure:</label>
+        <input
+          type="text"
+          name="bloodPressure"
+          value={formData.bloodPressure}
+          onChange={handleChange}
+          required
+        />
+        <br />
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  );
+};
+
+export default HealthForm;

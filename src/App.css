@@ -1,0 +1,193 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2 {
+  color: #2a6b5e;
+  text-align: center;
+}
+
+h2 {
+  margin-top: 0;
+}
+
+textarea {
+  font-size: 14px;
+  color: #740909;
+  padding: 10px;
+  border-radius: 5px;
+  resize: none;
+  border: 1px solid #801010;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="password"],
+input[type="time"],
+select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+button {
+  background-color: #e7f0ee;
+  color: #c21c1c;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3e8e53;
+}
+
+button[type="button"] {
+  background-color: #e1e1e1;
+}
+
+button[type="button"]:hover {
+  background-color: #ccc;
+}
+
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 600px;
+  margin: 30px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+fieldset {
+  border: 1px solid #ee0a0a;
+  border-radius: 5px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+legend {
+  font-weight: bold;
+  font-size: 16px;
+  color: #0c100f;
+}
+
+label {
+  font-size: 14px;
+  color: #711515;
+  display: block;
+  margin-bottom: 5px;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+select[multiple] {
+  height: 120px;
+  border-radius: 5px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  display: inline;
+  margin-right: 10px;
+}
+
+nav ul {
+  text-align: center;
+  margin-top: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #94a4a1;
+  font-size: 16px;
+}
+
+nav ul li a:hover {
+  color: #06ecbe;
+}
+
+textarea[readonly] {
+  background-color: #97c4cd;
+}
+button {
+  background-color: #3498db; /* Default blue color */
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+  transition: background-color 0.3s ease; /* Smooth color transition */
+}
+
+/* Button Hover State */
+button:hover {
+  background-color: #2980b9; /* Darker blue when hovered */
+}
+
+/* Button Active State (when pressed) */
+button:active {
+  background-color: #1f5d80; /* Even darker blue when clicked */
+}
+
+/* Button Disabled State (when disabled) */
+button:disabled {
+  background-color: #bdc3c7; /* Light gray color */
+  cursor: not-allowed;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+  form {
+    width: 930%;
+    margin: 20px auto;
+  }
+  button[type="button"] {
+  background-color: #2ecc71; /* Green color for Add Another Reminder button */
+}
+
+button[type="button"]:hover {
+  background-color: #27ae60; /* Darker green on hover */
+}
+
+button[type="button"]:active {
+  background-color: #1e824c; /* Even darker green when clicked */
+}
+
+
+  fieldset {
+    padding: 10px;
+  }
+
+  input[type="text"],
+  input[type="number"],
+  input[type="password"],
+  input[type="time"],
+  select {
+    width: 100%;
+  }
+
+  nav ul {
+    text-align: left;
+    margin-left: 20px;
+  }
+}
